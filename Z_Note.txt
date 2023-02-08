@@ -1,0 +1,9 @@
+=============== Sap xep, tim kiem ===============
+- DSA06002: Co the thay doi thuat toan sap xep
+- DSA06004: Co the thay doi cach dem
+- DSA06005: Giong het DSA06004
+- DSA06008: 
+  + So sanh ylog(x) va xlog(y)
+  + x = 0  =>  So cap = 0
+  + x = 1  =>  So cap = so cac so 0 trong Y 
+  + Co the co thuat toan khac nhanh hon

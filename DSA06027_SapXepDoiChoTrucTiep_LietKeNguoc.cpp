@@ -5,7 +5,7 @@ using namespace std;
 int step[100][100];
 int dem;
 
-void khoiTao() 
+void khoiTao()
 {
     dem = 0;
     for(int i = 0; i < 100; ++i)
@@ -24,22 +24,19 @@ void print(int n)
     }
 }
 
-void BubbleSort(int a[], int n)
+void InterchangeSort(int a[], int n)
 {
-    for(int i = 0; i < n; ++i)
+    for(int i = 0; i < n-1; ++i)
     {
-        int OK = 1;
-        for(int j = 0; j < n-i-1; ++j)
+        for(int j = i+1; j < n; ++j)
         {
-            if(a[j] > a[j+1])
+            if(a[i] > a[j]) 
             {
-                int temp = a[j];
-                a[j] = a[j+1];
-                a[j+1] = temp;
-                OK = 0;
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
             }
         }
-        if(OK) break;
 
         for(int j = 0; j < n; ++j)
         {
@@ -61,9 +58,9 @@ int main()
         cin >> n;
         int a[n];
         for(int i = 0; i < n; ++i) cin >> a[i];
-
-        BubbleSort(a, n);
+        
+        InterchangeSort(a, n);
         print(n);
+        return 0;
     }
-    return 0;
 }

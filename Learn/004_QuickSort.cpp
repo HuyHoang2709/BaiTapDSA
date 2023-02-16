@@ -4,6 +4,21 @@ using namespace std;
 
 // Code nay su dung pivot la phan tu cuoi cua mang
 
+int a[1005];
+int n;
+
+void input()
+{
+    cin >> n;
+    for(int i = 0; i < n; ++i) cin >> a[i];
+}
+
+void print()
+{
+    for(int i = 0; i < n; ++i) cout << a[i] << ' ';
+    cout << '\n';
+}
+
 int partition(int a[], int low, int high)
 {
     int pivot = a[high];
@@ -32,8 +47,8 @@ void QuickSort(int a[], int low, int high)
 
 int main()
 {
-    int a[] = {5, 1, 3, 6, 2, 4, 9, 10, 0};
-    QuickSort(a, 0, 8);
-    for(int i = 0; i < 9; ++i) cout << a[i] << ' ';
+    input();
+    QuickSort(a, 0, n-1);
+    print();
     return 0;
 }

@@ -19,7 +19,7 @@ void print()
     cout << '\n';
 }
 
-int partition(int a[], int low, int high)
+int partition(int low, int high)
 {
     int pivot = a[high];
     int i = low - 1;
@@ -35,20 +35,20 @@ int partition(int a[], int low, int high)
     return i + 1;
 }
 
-void QuickSort(int a[], int low, int high)
+void QuickSort(int low, int high)
 {
     if (low < high)
     {
-        int p = partition(a, low, high);
-        QuickSort(a, low, p - 1);
-        QuickSort(a, p + 1, high);
+        int p = partition(low, high);
+        QuickSort(low, p - 1);
+        QuickSort(p + 1, high);
     }
 }
 
 int main()
 {
     input();
-    QuickSort(a, 0, n-1);
+    QuickSort(0, n-1);
     print();
     return 0;
 }

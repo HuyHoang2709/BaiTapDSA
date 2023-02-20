@@ -12,7 +12,6 @@ void in()
 	cout << '\n';
 }
 
-
 void Try(int i)
 {
 	for(int j = 0; j <= 1; ++j)

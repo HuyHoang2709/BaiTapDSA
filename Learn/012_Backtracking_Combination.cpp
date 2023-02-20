@@ -12,7 +12,6 @@ void in()
 	cout << '\n';
 }
 
-
 void Try(int i)
 {
 	for(int j = C[i-1]+1; j <= n-k+i; ++j)
